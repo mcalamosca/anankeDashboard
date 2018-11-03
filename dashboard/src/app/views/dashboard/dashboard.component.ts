@@ -12,8 +12,11 @@ export class DashboardComponent implements OnInit {
 
 
   constructor(private stocksDataService: StocksDataService) {
-    this.stocksDataService.getStocks();
+
   }
   ngOnInit(): void {
+    this.stocksDataService.getStocks().subscribe(value => {
+      console.log(value);
+    });
   }
 }
