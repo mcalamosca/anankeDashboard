@@ -24,7 +24,7 @@ export class DefaultLayoutComponent {
     }
   }
   constructor() {
-    this.devMode = true;
+    this.devMode = false;
     this.navItems = this.navItemsDemo;
     this.changes = new MutationObserver((mutations) => {
       this.sidebarMinimized = document.body.classList.contains('sidebar-minimized');
